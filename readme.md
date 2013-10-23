@@ -1,21 +1,33 @@
-## Laravel PHP Framework
+## PHPLaravelPokerPointingSystem
+The goal of the software is to help poker room owners to market their business. Through this software, 
+the members can accumulate points everytime they seat on a poker table. The points given depends on
+how many minutes they seat, times with their membership level e.g gold,silver or whatever you call it
+and times with currently blind their sitting on.
 
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/version.png)](https://packagist.org/packages/laravel/framework) [![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.png)](https://packagist.org/packages/laravel/framework) [![Build Status](https://travis-ci.org/laravel/framework.png)](https://travis-ci.org/laravel/framework)
+The system also have email and sms integration which will help the poker rooms to inform their members
+with their promotions and marketing.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, and caching.
+### Features
+1. SMS Sending
+2. Email Sending
+3. Members Management
+4. Membership Levels
+5. Blinds Management
+6. User Management and Authentication
+7. Points accumulation tracking/logs
+8. Password Reset Utility
 
-Laravel aims to make the development process a pleasing one for the developer without sacrificing application functionality. Happy developers make the best code. To this end, we've attempted to combine the very best of what we have seen in other web frameworks, including frameworks implemented in other languages, such as Ruby on Rails, ASP.NET MVC, and Sinatra.
+### Project Status
+The software is currently under development and can be finished and be tested after 2 weeks.
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+### System Requirements
+1. MSYQL 5+
+2. PHP 5.3.7+
+3. Works with shared hosting
 
-## Official Documentation
-
-Documentation for the entire framework can be found on the [Laravel website](http://laravel.com/docs).
-
-### Contributing To Laravel
-
-**All issues and pull requests should be filed on the [laravel/framework](http://github.com/laravel/framework) repository.**
+### Installation
+Coming Soon
 
 ### License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+The software is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
