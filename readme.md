@@ -2,7 +2,7 @@
 The goal of the software is to help poker room owners to market their business. Through this software, 
 the members can accumulate points everytime they seat on a poker table. The points given depends on
 how many minutes they seat, times with their membership level e.g gold,silver or whatever you call it
-and times with currently blind their sitting on.
+and times with currently blind they are sitting on.
 
 The system also have email and sms integration which will help the poker rooms to inform their members
 with their promotions and marketing.
