@@ -7,7 +7,7 @@ class User extends Eloquent
      */
     public function delete()
     {
-        $this->delete = 1;
+        $this->deleted = 1;
         $this->activated = 0;
         $this->email = '';
         parent::save();   

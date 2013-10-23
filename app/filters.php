@@ -92,7 +92,7 @@ Route::filter('secure', function()
     if (!Sentry::check())
     {
         // User is not logged in, or is not activated
-        return Redirect::to('login');
+        return Redirect::to('auth/login');
     }
     
 });
@@ -110,7 +110,7 @@ Route::filter('superadmin', function()
     if (!Sentry::check())
     {
         // User is not logged in, or is not activated
-        return Redirect::to('login');
+        return Redirect::to('auth/login');
     }else{
         
         $user = Sentry::getUser();
