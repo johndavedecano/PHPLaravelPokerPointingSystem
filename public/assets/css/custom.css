@@ -1,0 +1,17 @@
+@font-face {
+	font-family: 'ProximaNovaLight';
+	src: url('../fonts/proximanova-light-webfont.eot');
+	src: url('../fonts/proximanova-light-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/proximanova-light-webfont.woff') format('woff'),
+		url('../fonts/proximanova-light-webfont.ttf') format('truetype'),
+		url('../fonts/proximanova-light-webfont.svg#ProximaNovaLight') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body, h1, h2, h3, h4, h5, h6,
+.uk-navbar-nav > li > a { font-family: "ProximaNovaLight", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+#login-wrapper {
+    margin-top:10%;
+}
