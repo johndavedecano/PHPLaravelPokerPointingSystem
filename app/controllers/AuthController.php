@@ -5,15 +5,11 @@ class AuthController extends BaseController
     
     public function login(){
         
-        if (Sentry::check())
-        {
-            // User is not logged in, or is not activated
-            return Redirect::to('/');
-        }
         return View::make('partials.login',$this->data);
     }
     
     public function login_post(){
+        
        if(!Request::ajax()){
             
             App::abort('401');
@@ -69,5 +65,10 @@ class AuthController extends BaseController
         $response = Response::make(json_encode($data),200);
         $response->header('Content-Type', 'text/json');
         return $response;
+    }
+    public function logout()
+    {
+        Sentry::logout();
+        return Redirect::to('auth/login');
     }
 }
