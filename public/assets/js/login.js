@@ -10,11 +10,13 @@ jQuery(document).ready(function(event){
         }
     });
     
-    jQuery(window).keypress(function(event){
-        if(event.keyCode == 13){
-            login();
-        }
-    }); 
+/*
+     jQuery(window).keypress(function(event){
+         if(event.keyCode == 13){
+             login();
+         }
+     }); 
+ */
     
 });
 

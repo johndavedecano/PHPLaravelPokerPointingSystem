@@ -6,7 +6,7 @@ class DashboardController extends BaseController
     
 	public function dashboard()
 	{
-
+        $this->layout->content = View::make('partials.dashboard',$this->data);
 	}
 
 }

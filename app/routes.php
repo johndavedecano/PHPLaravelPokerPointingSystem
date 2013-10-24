@@ -1,13 +1,14 @@
 <?php
-
-Route::get('/',function(){
-    return View::make('master');
-});
 /**
  * Routes for all kinds of users except guest
  */
 Route::group(array('before' => 'secure'), function()
 {
+    /**
+     * Dashboard
+     */
+     Route::get('/','DashboardController@dashboard');
+    
     /**
      * Members
      */
