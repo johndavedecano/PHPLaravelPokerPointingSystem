@@ -10,12 +10,13 @@ jQuery(document).ready(function(event){
         }
     });
     
+
 /*
-     jQuery(window).keypress(function(event){
-         if(event.keyCode == 13){
-             login();
-         }
-     }); 
+    jQuery(window).keypress(function(event){
+        if(event.keyCode == 13){
+            login();
+        }
+    });
  */
     
 });
@@ -31,16 +32,25 @@ var login = function(){
     
     var remember = jQuery('#remember').val();
     
+    window.login_validated = true;
+    
+    jQuery('#error-message').html('');
+    jQuery('#error-message').hide('fast');
+    
     if(regex.test(email) == false)
     {
         jQuery('#email').addClass('uk-form-danger');
         window.login_validated = false;
+    }else{
+        window.login_validated = true;
     }
     
     if(password == '')
     {
         jQuery('#password').addClass('uk-form-danger');
         window.login_validated = false;
+    }else{
+        window.login_validated = true;
     }
     /*
      * Continue AJAX Request
@@ -56,8 +66,9 @@ var login = function(){
                 {
                     window.login_validated = false;
                     jQuery('#error-message').html(data.message);
-                    jQuery('#error-message').show();
+                    jQuery('#error-message').fadeIn();
                 }else{
+                    window.login_validated = true;
                     window.location = '/';
                 }
             }

@@ -2,10 +2,16 @@
 <html>
     <head>
     	<title>Poker Membership</title>
-    	<link rel="stylesheet" href="{{ URL::to('assets/css/uikit.almost-flat.min.css') }}" />
+        <link rel="stylesheet" href="{{ URL::to('assets/css/uikit.almost-flat.min.css') }}" />
         <link rel="stylesheet" href="{{ URL::to('assets/css/custom.css') }}" />
+    @foreach($csheets as $csheet)
+    <link rel="stylesheet" href="{{ $csheet }}" />    
+    @endforeach
     	<script src="{{ URL::to('assets/js/libraries/jquery.js') }}"></script>
     	<script src="{{ URL::to('assets/js/libraries/uikit.min.js') }}"></script>
+    @foreach($scripts as $script)
+    <script src="{{ $script }}"></script>
+    @endforeach
     </head>
     <body>
     <!--- NAVIGATION STARTS -->
@@ -36,6 +42,7 @@
     	<div class="uk-grid" data-uk-grid-margin="">
             @include('partials.sidebar')
             <div class="tm-main uk-width-medium-3-4">
+            <h3 class="uk-display-block uk-align-left"><i class="uk-icon-{{ $page_icon }}"></i> {{ $page_title }}</h3>
             @yield('content')
             </div>
     	</div>
