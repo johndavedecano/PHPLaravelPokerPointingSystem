@@ -1,7 +1,7 @@
 @extend('master')
 @section('content')
 
-
+<div style="clear: both;"></div>
 @if(Session::has('error'))
     <div class="uk-alert uk-alert-danger" data-uk-alert="">
           <a href="#" class="uk-alert-close uk-close"></a>
@@ -24,7 +24,7 @@
         @endforeach
     </div><!--alert-->
 @endif
-
+<div class="uk-clearfix"></div>
 <form class="uk-form uk-form-horizontal" action="{{ Request::url() }}" data-validate="parsley" id="form" method="POST" enctype="multipart/form-data">
 
 	<div class="uk-form-row">

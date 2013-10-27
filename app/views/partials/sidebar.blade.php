@@ -9,7 +9,7 @@
         
         <li class="uk-nav-header"><i class="uk-icon-signal"></i> Levels</li>
         <li><a href="{{ URL::to('levels') }}">All Levels</a></li>
-        <li><a href="{{ URL::to('levels') }}">Add Level</a></li>
+        <li><a href="{{ URL::to('levels/create') }}">Add Level</a></li>
         
         <li class="uk-nav-header"><i class="uk-icon-eye-open"></i> Blinds</li>
         <li><a href="{{ URL::to('blinds') }}">All Blinds</a></li>

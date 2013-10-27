@@ -9,7 +9,8 @@ class UsersController extends BaseController
         $this->append_css(URL::to('assets/css/zebra/metallic.css'));
         $this->append_js(URL::to('assets/js/libraries/zebra_datepicker.js'));
         $this->append_js(URL::to('assets/js/libraries/parsley.js'));
-        $this->append_js(URL::to('assets/js/libraries/jquery.dataTables.min.js'));        
+        $this->append_js(URL::to('assets/js/libraries/jquery.dataTables.min.js'));       
+        $this->append_js(URL::to('assets/js/global.js')); 
         $this->append_js(URL::to('assets/js/users.js'));
         $this->data['groups'] = Group::orderBy('name')->get();
     }

@@ -1,6 +1,7 @@
 @extend('master')
 @section('content')
-
+<a class="uk-button uk-align-right" href="{{ URL::to('users/create') }}"><i class="uk-icon-plus-sign"></i> Add User</a>
+<div style="clear: both;"></div>
 @if(Session::has('error'))
     <div class="uk-alert uk-alert-danger" data-uk-alert="">
           <a href="#" class="uk-alert-close uk-close"></a>
@@ -13,7 +14,6 @@
         {{ Session::get('success') }}
     </div>
 @endif
-<a class="uk-button uk-align-right" href="{{ URL::to('users/create') }}"><i class="uk-icon-plus-sign"></i> Add User</a>
 <div style="clear: both;"></div>
 <table class="uk-table dynamic_table" id="dynamic_table">
 	<thead>

@@ -10,7 +10,7 @@ jQuery(document).ready(function(){
         if(cf){
             jQuery.ajax({
                 type:'POST',
-                url:'/users/delete',
+                url:'/levels/delete',
                 data:'id='+id,
                 success:function(data){
                     if(data == 'success')
