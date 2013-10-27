@@ -13,7 +13,7 @@ jQuery(document).ready(function(){
                 url:'/levels/delete',
                 data:'id='+id,
                 success:function(data){
-                    if(data == 'success')
+                    if(data == 1)
                     {
                         window.location.reload(true);
                     }else{ alert(data); }

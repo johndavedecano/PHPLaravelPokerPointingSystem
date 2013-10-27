@@ -1,4 +1,14 @@
 jQuery(document).ready(function(){
+    
+    if(jQuery('.members_table').length > 0) {
+    	jQuery('.members_table').dataTable({
+    		"sPaginationType": "full_numbers",
+    		"aaSortingFixed": [[1,'asc']],
+    		"fnDrawCallback": function(oSettings) {
+    		  //jQuery.uniform.update();
+    		}
+    	});
+    }   
     /*
      * Delete Item
      */
@@ -10,7 +20,7 @@ jQuery(document).ready(function(){
         if(cf){
             jQuery.ajax({
                 type:'POST',
-                url:'/levels/delete',
+                url:'/members/delete',
                 data:'id='+id,
                 success:function(data){
                     if(data == 1)

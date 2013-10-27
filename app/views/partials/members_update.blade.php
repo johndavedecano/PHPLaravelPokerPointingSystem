@@ -32,14 +32,14 @@
 	<div class="uk-form-row">
 		<label class="uk-form-label" for="form-h-it">First Name</label>
 		<div class="uk-form-controls">
-			<input type="text" id="first_name" placeholder="John" class="uk-form-width-medium required" name="first_name">
+			<input type="text" id="first_name" placeholder="John" class="uk-form-width-medium required" name="first_name" value="{{ $member->first_name }}">
 		</div>
 	</div>
     
 	<div class="uk-form-row">
 		<label class="uk-form-label" for="form-h-it">Last Name</label>
 		<div class="uk-form-controls">
-			<input type="text" id="last_name" placeholder="Doe" class="uk-form-width-medium required" name="last_name">
+			<input type="text" id="last_name" placeholder="Doe" class="uk-form-width-medium required" name="last_name" value="{{ $member->last_name }}">
 		</div>
 	</div>
     
@@ -47,8 +47,16 @@
 		<label class="uk-form-label" for="form-h-it">Gender</label>
 		<div class="uk-form-controls">
             <select name="gender" id="gender">
-            	<option value="male">Male</option>
+                @if($member->gender == 'male')
+                <option value="male" selected>Male</option>
+                @else
+                <option value="male">Male</option>
+                @endif
+                @if($member->gender == 'female')
+                <option value="female" selected>Female</option>
+                @else
                 <option value="female">Female</option>
+                @endif
             </select>
 		</div>
 	</div>
@@ -56,35 +64,35 @@
 	<div class="uk-form-row">
 		<label class="uk-form-label" for="form-h-it">Date of Birth</label>
 		<div class="uk-form-controls">
-			<input type="text" id="dob" placeholder="" class="uk-form-width-medium datepicker" name="dob">
+			<input type="text" id="dob" placeholder="" class="uk-form-width-medium datepicker" name="dob" value="{{ $member->dob }}">
 		</div>
 	</div> 
     
 	<div class="uk-form-row">
 		<label class="uk-form-label" for="form-h-it">Address</label>
 		<div class="uk-form-controls">
-			<textarea id="address" placeholder="" class="uk-form-width-medium" name="address"></textarea>
+			<textarea id="address" placeholder="" class="uk-form-width-medium" name="address">{{ $member->address }}</textarea>
 		</div>
 	</div> 
     
 	<div class="uk-form-row">
 		<label class="uk-form-label" for="form-h-it">Email</label>
 		<div class="uk-form-controls">
-			<input type="email" id="email" placeholder="" class="uk-form-width-medium email" name="email">
+			<input type="email" id="email" placeholder="" class="uk-form-width-medium email" name="email" value="{{ $member->email }}">
 		</div>
 	</div> 
     
 	<div class="uk-form-row">
 		<label class="uk-form-label" for="form-h-it">Phone</label>
 		<div class="uk-form-controls">
-			<input type="text" id="phone" placeholder="" class="uk-form-width-medium" name="phone">
+			<input type="text" id="phone" placeholder="" class="uk-form-width-medium" name="phone" value="{{ $member->phone }}">
 		</div>
 	</div>
     
 	<div class="uk-form-row">
 		<label class="uk-form-label" for="form-h-it">Skype</label>
 		<div class="uk-form-controls">
-			<input type="text" id="skype" placeholder="" class="uk-form-width-medium" name="skype">
+			<input type="text" id="skype" placeholder="" class="uk-form-width-medium" name="skype" value="{{ $member->skype }}">
 		</div>
 	</div>
     
@@ -100,16 +108,13 @@
 		<div class="uk-form-controls">
 			<select name="level_id" class="uk-form-width-medium">
                 @foreach($levels as $level)
+                    @if($member->level_id == $level->id)
+                    <option value="{{ $level->id }}" selected>{{ ucwords($level->name) }}</option>
+                    @else
                     <option value="{{ $level->id }}">{{ ucwords($level->name) }}</option>
+                    @endif
                 @endforeach
             </select>
-		</div>
-	</div>
-    
-	<div class="uk-form-row">
-		<label class="uk-form-label" for="form-h-it">Initial Points</label>
-		<div class="uk-form-controls">
-			<input type="number" id="points" placeholder="" class="uk-form-width-medium" name="points">
 		</div>
 	</div>
     
